@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kérdőív</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action="feldolgoz.php">
+            <fieldset>
+                <legend>Kérdőív</legend>
+                <label for="vez_nev">Vezetéknév</label> <br>
+                <input type="text" name="ven_nev" id="vez_nev" placeholder="Vezetéknév"> <br>
+                <label for="ker_nev">Keresztnév</label> <br>
+                <input type="text" name="ker_nev" id="ker_nev" placeholder="Kereztnév"> <br>
+                <label for="">Mennyire elégedett az alkalmazásunkkal</label> <br>
+                <input type="radio" name="alk" id="no" checked > 
+                <label for="no">Egyáltalán nem</label> <br>
+                <input type="radio" name="alk" id="gond">
+                <label for="gond">Vannak gondok</label> <br>
+                <input type="radio" name="alk" id="nrossz">
+                <label for="nrossz">Nem rossz</label> <br>
+                <input type="radio" name="alk" id="jo">
+                <label for="jo">Elég jó</label> <br>
+                <input type="radio" name="alk" id="njo">
+                <label for="njo">Bagyon jó</label> <br>
+                <label for="bongeszo">Milyen böngészőt használ</label> <br>
+                <input type="text" name="bongeszo" id="bongeszo" list="bongeszolista" placeholder="Milyen bongészőt használ"> <br>
+                <datalist id="bongeszolista">
+                    <option> Google Chrome</option>
+                    <option>Mozilla Firefox</option>
+                    <option>Explorer</option>
+                </datalist>
+                <label for="">Melyik funkció tetszett leginkább Önnek</label> <br>
+                <select name="lista" >
+                    <option value="1" >Egyik sem</option>
+                    <option value="2">csak egy</option>
+                    <option value="3">Kettő</option>
+                    <option value="4">Három</option>
+                    <option value="5">Négy</option>
+                </select>
+                <br>
+                <textarea id="szoveg" cols="60" rows="10"></textarea> <br>
+                <input type="submit" name="Adatok küldése" id="kuldes" value="Adatok küldése">
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+html{
+	background-color: #bfbfbf;
+	margin: 0;
+}
+
+body{
+	background-color: #fff;
+	padding: 20px 20px 5px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+body > *{
+	margin-bottom: 15px;
+}
+
+header{
+	background-color: #f1f1f1;
+	padding: 40px 20px;
+}
+main{
+	position: relative;
+}
+main > nav{
+	background-color: lightgrey;
+	width: 19%;
+	padding: 40px 20px;
+	height: 200px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+main > section{
+	background-color: yellow;
+	width: 45%;
+	padding: 40px 20px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+main > aside{
+	background-color: green;
+	width: 19%;
+	height: 300px;
+	padding: 40px 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+footer{
+	background-color: #616161;
+	padding: 40px 20px;
+	color: #fff;
+}

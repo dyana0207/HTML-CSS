@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regisztráció</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action="regisztracio/reg.php" method="POST">
+            <fieldset>
+                <legend>Regisztráció:</legend>
+                <label for="email">E-mail</label> <br>
+                <input type="email" name="email" id="email" placeholder="Email"> <br>
+                <label for="f_nev">Felhasználónév:</label> <br>
+                <input type="text" name="felhasznalo" id="f_nev" placeholder="Felhasználónév"><br>
+                <label for="jelszo">Jelszó</label> <br>
+                <input type="password" name="jelszo" id="jelszo" placeholder="Jelszó"><br>
+                <label for="">Nem</label> <br>
+                <input type="radio" name="nem" id="ferfi">
+                <label for="ferfi">Férfi</label> <br>
+                <input type="radio" name="nem" id="no">
+                <label for="no">Nő</label> <br>
+                <label for="szul_ido">Születési dátum</label> <br>
+                <input type="date" name="szul_ido" id="szul_ido"> <br>
+                <br>
+                <input type="submit" name="Kuldes" id="">
+                <input type="reset" value="Alaphelyzet" name="Alaphelyzet">
+        </form>
+    </body>
+</html>

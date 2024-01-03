@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+nav{
+	background-color: #ff9999;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 30%;
+	padding: 70px 15px 0;
+	position: fixed;
+	height: 100vh;
+	/*top: 0;
+	bottom: 0;*/
+}
+
+nav a{
+	display: block;
+	text-decoration: none;
+	color: #000;
+	padding: 15px;
+	font-family: courier new;
+}
+
+nav a:hover{
+	background-color: #ff8080;
+}
+
+main{
+	width: 70%;
+	padding: 20px;
+	margin-left: 30%;
+}
+
+main > *{
+	margin-bottom: 15px;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dinamikusan szerkeszthető táblázat</title>
+		<meta charset = "utf-8">
+		<link rel = "styleSheet" type = "text/css" href = "style.css">
+										<!--Saját link-->
+		<script src="https://kit.fontawesome.com/2bd1824b85.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Programozási képzések</h1>
+			<p>Regisztrált személyek</p>
+		</header>
+		<section>
+			<div id = "vezerlok">
+				<div id = "vezerlo1">
+					<div>
+						<button id = "uj_sor" class = "edit_btn transparent medium" data-tooltip = "Új sor"><i class = "far fa-plus-square"></i></button>
+						<p id = "sorok_szama_p">Sorok száma: </p>
+					</div>
+					<div>
+						<select id = "mezo">
+							<option value = "1">Vezetéknév</option>
+							<option value = "2">Keresztnév</option>
+							<option value = "3">Telefonszám</option>
+							<option value = "4">Email</option>
+							<option value = "5">Képzés</option>
+						</select>
+						<div class = "serach-div">
+							<i class = "fas fa-search"></i>
+							<input type = "search" placeholder = "Keresés...">
+						</div>
+					</div>
+				</div>
+				<div id = "vezerlo2">
+					<div>
+						<button id = "torles_megse" class = "edit_btn transparent" data-tooltip = "Mégse" onclick = "torlesMegse();" ><i class = "close-icon"></i></button>
+						<span> 1 sor kijelölve</span>
+						<button id = "kijeloltek_torlese" class = "edit_btn transparent" data-tooltip = "Törlés"  onclick = "sorokTorlese();"><i class = "far fa-trash-alt"></i></button>
+					</div>
+				</div>
+			</div>
+			<table id = "jelentkezok_tabla">
+				<tr>
+					<th data-check><input type = "checkbox"></th>
+					<th>Vezetéknév</th>
+					<th>Keresztnév</th>
+					<th>Telefonszám</th>
+					<th>Email</th>
+					<th>Képzés</th>
+					<th></th>
+				</tr>
+			</table>
+		</section>
+		
+		
+		<!----------------------------------------->
+		<!--------------Context menük-------------->
+		<!----------------------------------------->
+		<div id = "td_cMenu" class = "contextmenu">
+			<button class = "menupont" id="szekeszt" >
+				<i class = "far fa-edit"></i>
+				<span>Szerkesztés</span>
+			</button>
+			<button class = "menupont" >
+				<i class = "far fa-check-circle"></i>
+				<span>Mentés</span>
+			</button>
+			<button class = "menupont">
+				<i class = "far fa-check-circle"></i>
+				<span>Megjelölés</span>
+			</button>
+			<button class = "menupont">
+				<i class = "far fa-trash-alt"></i>
+				<span>Törlés</span>
+			</button>
+			<button class = "menupont">
+				<i class = "far fa-times-circle"></i>
+				<span>Mégse</span>
+			</button>
+		</div>
+		
+		<div id = "th_cMenu" class = "contextmenu">
+			<button class = "menupont">
+				<i class = "fas fa-sort-amount-down-alt"></i>
+				<span>Rendezés növekvő sorrendbe</span>
+			</button>
+			<button class = "menupont" >
+				<i class = "fas fa-sort-amount-down"></i>
+				<span>Rendezés csökkenő sorrendbe</span>
+			</button>
+		</div>
+		<!----------------------------------------->
+		<!--------------Context menük-------------->
+		<!----------------------------------------->
+		
+		
+		<!---------------------------------------------------------->
+		<!--------------------Párbeszéd ablakok--------------------->
+		<!---------------------------------------------------------->
+		<div id = "muveletMegerosit_ablak" class = "parbeszed_ablak">
+			<div class = "ablak">
+				<div class = "header">
+					<h1>Művelet</h1>
+				</div>
+				<div class = "body">
+					<p>Biztos törölni szeretné a kijelölt sorokat?</p>
+				</div>
+				<div class = "footer">
+					<button class = "btn_YesNo" id="megse">Mégse</button>
+					<button class = "btn_YesNo" id="igen">Igen</button>
+				</div>
+			</div>
+		</div>
+		
+		<div id = "ujSorBeszuras_ablak" class = "parbeszed_ablak">
+			<div class = "ablak">
+				<div class = "header">
+					<h1>Új sor beszúrása</h1>
+				</div>
+				<div class = "body">
+					<div>
+						<label>Vezetéknév: </label>
+						<input type = "text" id = "vNev">
+					</div>
+					<div>
+						<label>Keresztnév: </label>
+						<input type = "text" id = "kNev">
+					</div>
+					<div>
+						<label>Telefonszám: </label>
+						<input type = "text" id = "tel">
+					</div>
+					<div>
+						<label>Email: </label>
+						<input type = "text" id = "email">
+					</div>
+					<div>
+						<label>Képzés: </label>
+						<select id = "kepzes">
+						</select>
+					</div>
+				</div>
+				<div class = "footer">
+					<button class = "btn_YesNo" onclick="ujAdatMegse()">Mégse</button>
+					<button class = "btn_YesNo"  onclick="ujAdatMentes()">Mentés</button>
+				</div>
+				
+			</div>
+		</div>
+		<!---------------------------------------------------------->
+		<!--------------------Párbeszéd ablakok--------------------->
+		<!---------------------------------------------------------->
+		
+		<!---A script fájlokat ha szükséges cseréld fel-->
+		<script src = "adatok.js"></script>
+		<script src = "script.js"></script>
+	</body>
+</html>

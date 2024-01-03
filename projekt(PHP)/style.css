@@ -1,0 +1,384 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Calibri;
+}
+
+body{
+	background-color: #f1f1f1;
+}
+
+body > header{
+	padding: 20px 0;
+	background-color: #fff;
+	border-bottom: 1px solid #d9d9d9;
+	margin-bottom: 20px;
+}
+
+body > header *{
+	width: 1200px;
+	margin: auto;
+	font-size: 13pt;
+}
+
+body > header h1{
+	font-size: 26pt;
+	font-weight: normal;
+	margin-bottom: 15px;
+}
+
+body > section{
+	width: 1200px;
+	margin: 15px auto;
+	padding-top: 30px;
+}
+
+#jelentkezok_tabla{
+	background-color: #fff;
+	width: 100%;
+	border-collapse: collapse;
+	border-radius: 5px;
+}
+
+#jelentkezok_tabla tr{
+	cursor: pointer;
+}
+
+#jelentkezok_tabla tr:hover:not(:first-child){
+	box-shadow: 1px 2px 10px #d9d9d9;
+}
+
+#jelentkezok_tabla th{
+	padding: 15px;
+	text-align: left;
+}
+
+#jelentkezok_tabla th:first-child{
+	width: 30px;
+}
+
+#jelentkezok_tabla th:last-child{
+	width: 120px;
+}
+
+#jelentkezok_tabla th:nth-child(2){
+	width: 16%;
+}
+#jelentkezok_tabla th:nth-child(3){
+	width: 16%;
+}
+#jelentkezok_tabla th:nth-child(4){
+	width: 16%;
+}
+
+#jelentkezok_tabla th:nth-child(6){
+	width: 16%;
+}
+
+#jelentkezok_tabla td{
+	padding: 5px 15px;
+	border-top: 1px solid #d9d9d9;
+}
+
+
+[type='checkbox']{
+	cursor: pointer;
+	
+}
+
+td input, td select{
+	display: block;
+	width: 100%;
+	padding: 5px;
+	margin: 0;
+	font-size: 12pt;
+}
+
+
+/**************GOMBOK*****************/
+
+.edit_btn{
+	outline: 0;
+	border: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	position: relative;
+	background-color: #fff;
+	font-size: 11pt;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.edit_btn.right{
+	float: right;
+}
+
+.edit_btn:hover:not(:disabled){
+	background-color: #f1f1f1;
+}
+
+.hide{
+	visibility: hidden;
+}
+
+tr:hover .hide{
+	visibility: visible;
+}
+
+.edit_btn.transparent{
+	background-color: transparent;
+}
+
+.edit_btn.transparent:hover{
+	background-color: #d9d9d9;
+}
+
+.edit_btn.medium i{
+	font-size: 1.3em
+}
+
+.btn_YesNo{
+	border: 1px solid #d9d9d9;
+	padding: 10px 20px;
+	outline: 0;
+	cursor: pointer;
+	background-color: transparent;
+	border-radius: 5px;
+}
+
+.btn_YesNo:hover{
+	border-color: #80bfff;
+}
+
+
+/**************VEZÉRLŐK*****************/
+
+#vezerlok > div{
+	padding: 2px;
+	/*border: 1px solid red;*/
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+#vezerlok div{
+	display: flex;
+	align-items: center;
+}
+
+#vezerlok > div > div:first-child > *{
+	margin-right: 5px;
+}
+
+#vezerlok > div > div:last-child > *{
+	margin-left: 5px;
+}
+
+#vezerlok #vezerlo2{
+	display: none;
+}
+
+.serach-div{
+	border: 1px solid #d9d9d9;
+	padding-left: 5px;
+}
+
+.serach-div input{
+	border: 0;
+	outline: 0;
+	margin: 0;
+	width: 200px;
+	padding: 8px 5px;
+	background-color: #f1f1f1;
+	font-size: 11pt;
+}
+
+.serach-div input::placeholder{
+	color: #000;
+}
+
+#mezo{
+	padding: 8px 5px;
+	width: 150px;
+	font-size: 11pt;
+	border: 1px solid #d9d9d9;
+	outline: 0;
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+
+#mezo:focus{
+	background-color: #fff;
+}
+
+/*****/
+.close-icon{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.close-icon::after{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 13px;
+	background-color: #000;
+	transform: rotate(45deg);
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.close-icon::before{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 13px;
+	background-color: #000;
+	transform: rotate(-45deg);
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+
+/******************CONTEXT MENU***********/
+
+.contextmenu{
+	width: max-content;
+	background-color: #fff;
+	box-shadow: 1px 1px 10px #666;
+	padding: 8px 0;
+	position: absolute;
+	border-radius: 5px;
+	display: none;
+}
+
+.contextmenu .menupont{
+	cursor: pointer;
+	padding: 5px 45px 5px 5px;
+	display: block;
+	border: 0;
+	outline: 0;
+	font-size: 12pt;
+	background-color: #fff;
+	width: 100%;
+	text-align: left;
+}
+
+.contextmenu .menupont:hover:not(:disabled){
+	background-color: #e9e9e9;
+}
+
+.contextmenu .menupont *{
+	margin-left: 10px;
+}
+
+
+/********TOOLTIP*********/
+[data-tooltip]{
+	position: relative;
+}
+
+.tooltip{
+	border-radius: 5px;
+	display: block;
+	position: absolute;
+	padding: 5px 10px;
+	background-color: #555;
+	color: #fff;
+	z-index: 10;
+	text-align: center;
+	margin: 0;
+	width: max-content;
+}
+
+
+/************Párbeszéd Ablak***********/
+
+.parbeszed_ablak{
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(0,0,0,0.2);
+	display: none;
+}
+
+.parbeszed_ablak .ablak{
+	background-color: #fff;
+	width: fit-content;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 20%;
+}
+
+.parbeszed_ablak .ablak > *{
+	padding: 20px 20px 0;
+} 
+
+.parbeszed_ablak .ablak .footer{
+	display: flex;
+	justify-content: flex-end;
+	padding-bottom: 20px;
+}
+
+.parbeszed_ablak .ablak .footer > *{
+	margin-left: 5px;
+}
+
+.parbeszed_ablak .ablak .header h1{
+	font-weight: normal;
+	font-size: 22pt;
+	min-width: 400px;
+}
+
+#ujSorBeszuras_ablak .body div{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+#ujSorBeszuras_ablak .body div > *{
+	margin-left: 5px;
+	font-size: 13pt;
+}
+
+#ujSorBeszuras_ablak .body div input, #ujSorBeszuras_ablak .body div select{
+	padding: 5px;
+	width: 300px;
+}
+
+
+/**********HIBA**********/
+.hiba_ablak{
+	width: fit-content;
+	min-width: 500px;
+	padding: 10px;
+	background-color: #ffe6b3;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+
+
+
+

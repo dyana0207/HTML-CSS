@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Karma", sans-serif;
+}
+body > header, main, body > footer{
+	width: 1200px;
+	margin: 0 auto;
+}
+body > header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	background-color: white;
+}
+main{
+	margin-top: 100px;
+}
+.menu_btn{
+	color: #000;
+	text-decoration: none;
+	padding: 15px;
+	font-size: 19pt;
+}
+.menu_btn:hover{
+	background-color: grey;
+}
+body > header h1,  body > header p{
+	font-size: 18pt;
+	font-weight: normal;
+}
+main > section{
+	padding: 24px;
+}
+main > section:first-child{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border-bottom: 1px solid #ccc;
+}
+main > section:first-child article img{
+	width: 100%;
+}
+main > section:first-child article{
+	width: 25%;
+	padding: 8px;
+}
+p{
+	font-size: 15px;
+}
+main > section:first-child article h2{
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 15px;
+}
+main > section:first-child article p{
+	text-align: center;
+	margin-bottom: 15px;
+}
+main > section:first-child nav{
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+main > section:first-child nav a{
+	color: black;
+	text-decoration: none;
+	padding: 10px 15px;
+}
+main > section:first-child nav a:hover{
+	color:#fff;
+	background-color: black;
+	
+}
+main > section:first-child nav a.aktiv{
+	color:#fff;
+	background-color: black;
+}
+main > section:first-child nav a.aktiv:hover{
+	color:black;
+	background-color: grey;
+	
+}
+#menu{
+	position: fixed;
+	left: -42%;
+	top: 0;
+	bottom: 0;
+	width: 40%;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	z-index: 11;
+	transition: left 0.5s;
+}
+#menu a{
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	color: black;
+	font-size: 18pt;
+	height: 200px;
+}
+#menu a:hover{
+	background-color: #ccc;
+}
+#menu:target{
+	left: 0;
+}

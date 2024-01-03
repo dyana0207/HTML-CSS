@@ -1,0 +1,26 @@
+body{
+	background-color: #bfbfbf;
+}
+#doboz1 {
+	background-color: #ff99ff;
+	border: 1px solid black;
+}
+	 
+#doboz2 {
+	width:400px;
+	background-color: #dfdfdf;
+	border: 1px solid black;
+	position : relative;
+	top: 20px;
+	left: 20px;
+	z-index: 1;
+}
+#doboz3 {
+	width: 400px;
+	background-color: #99ddff;
+	border: 1px solid black;
+	position: relative;
+	right: 20px;
+	left: 20px;
+}
+
